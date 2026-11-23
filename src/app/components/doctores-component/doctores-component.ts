@@ -16,6 +16,12 @@ export class DoctoresComponent implements OnInit {
     private _cdr: ChangeDetectorRef
   ){}
 
+  async eliminarDoctor(iddoctor: number): Promise<void> {
+    await this._service.deleteDoctor(iddoctor)
+    this.arraydoctores = await this._service.getDoctoresAsync()
+    this._cdr.detectChanges()
+  }
+
   async ngOnInit(): Promise<void> {
     this.arraydoctores = await this._service.getDoctoresAsync()
     this._cdr.detectChanges()

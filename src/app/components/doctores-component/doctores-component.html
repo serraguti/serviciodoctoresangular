@@ -8,6 +8,7 @@
             <th>Especialidad</th>
             <th>Salario</th>
             <th>Hospital</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,12 @@
                 <td>{{doctor.especialidad}}</td>
                 <td>{{doctor.salario}}</td>
                 <td>{{doctor.idHospital}}</td>
+                <td>
+                    <button class="btn btn-danger"
+                        (click)="eliminarDoctor(doctor.idDoctor)">
+                        Delete
+                    </button>
+                </td>
             </tr>
         }
     </tbody>

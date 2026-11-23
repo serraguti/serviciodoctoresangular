@@ -26,4 +26,12 @@ export class ServiceDoctores{
             this._http.post(url, doctor, {headers: header})
         )
     }
+
+    async deleteDoctor(iddoctor: number): Promise<any> {
+        let request = "api/doctores/" + iddoctor
+        let url = environment.apiejemplos + request
+        return firstValueFrom(
+            this._http.delete(url)
+        )
+    }
 }
