@@ -1,0 +1,17 @@
+<h2>Create doctor</h2>
+<form #form="ngForm">
+    Id doctor: 
+    <input type="number" #cajaid name="cajaid" class="form-control"/>
+    Apellido: 
+    <input type="text" #cajaapellido name="cajaapellido" class="form-control"/>
+    Especialidad: 
+    <input type="text" #cajaespe name="cajaespe" class="form-control"/>
+    Salario: 
+    <input type="number" #cajasalario name="cajasalario" class="form-control"/>
+    Id Hospital: 
+    <input type="number" #cajahospital name="cajahospital" class="form-control"/>   
+    <button (click)="insertarDoctor()" class="btn btn-dark">
+        Insertar
+    </button>
+</form>
+<h3 style="color:blue">{{mensaje}}</h3>
